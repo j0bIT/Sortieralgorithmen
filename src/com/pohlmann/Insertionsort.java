@@ -1,14 +1,21 @@
 package com.pohlmann;
 
+import java.util.Arrays;
+
 public class Insertionsort {
     public static int[] sort(int[] toSort){
-        for (int i = 1; i < toSort.length; i++){
-            int j = i;
-            while (j > 0 && toSort[j-1] > toSort[i]){
-                toSort[j] = toSort[j-1];
+        int n = 0;
+        for (int i = 1; i < toSort.length; i++) {
+            int key = toSort[i];
+            int j = i-1;
+            while ( (j > -1) && ( toSort [j] > key ) ) {
+                toSort [j+1] = toSort [j];
                 j--;
+                n+=2;
             }
+            toSort[j+1] = key;
         }
+        System.out.println("Laufzeit: " + n);
         return toSort;
     }
 }

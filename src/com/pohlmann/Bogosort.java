@@ -1,9 +1,12 @@
 package com.pohlmann;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Bogosort {
     public static int[] sort(int[] toSort) {
+        int n = 0;
+
         Random r = new Random();
         while (!isSorted(toSort)) {
             int a = r.nextInt(toSort.length);
@@ -12,7 +15,11 @@ public class Bogosort {
             int temp = toSort[a];
             toSort[a] = toSort[b];
             toSort[b] = temp;
+
+            n += toSort.length + 2;
         }
+
+        System.out.println("Laufzeit: " + n);
 
         return toSort;
     }
