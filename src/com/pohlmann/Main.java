@@ -1,9 +1,6 @@
 package com.pohlmann;
 
-import com.pohlmann.Sort.Bogosort;
-import com.pohlmann.Sort.Insertionsort;
-import com.pohlmann.Sort.Mergesort;
-import com.pohlmann.Sort.Quicksort;
+import com.pohlmann.Sort.*;
 
 import java.util.Arrays;
 
@@ -11,6 +8,14 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         int[] array = {4, 5, 2, 3, 6, 324, 23423423, 423, 4, 234, 34324, 34324};
+
+        System.out.println("Selectionsort");
+        Tools.measureTime(() -> {
+            System.out.println(Arrays.toString(Selectionsort.sort(array.clone())));
+            return null;
+        });
+
+        System.out.println("==================================================================");
 
         System.out.println("Mergesort");
         Tools.measureTime(() -> {
