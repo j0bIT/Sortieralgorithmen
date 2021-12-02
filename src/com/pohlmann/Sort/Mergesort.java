@@ -1,4 +1,4 @@
-package com.pohlmann;
+package com.pohlmann.Sort;
 
 public class Mergesort {
     public static int[] sort(int[] toSort) {

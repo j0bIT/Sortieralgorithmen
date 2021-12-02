@@ -1,5 +1,10 @@
 package com.pohlmann;
 
+import com.pohlmann.Sort.Bogosort;
+import com.pohlmann.Sort.Insertionsort;
+import com.pohlmann.Sort.Mergesort;
+import com.pohlmann.Sort.Quicksort;
+
 import java.util.Arrays;
 
 public class Main {

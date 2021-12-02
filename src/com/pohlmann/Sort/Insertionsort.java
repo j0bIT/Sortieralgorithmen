@@ -1,6 +1,4 @@
-package com.pohlmann;
-
-import java.util.Arrays;
+package com.pohlmann.Sort;
 
 public class Insertionsort {
     public static int[] sort(int[] toSort){
