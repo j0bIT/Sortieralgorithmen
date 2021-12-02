@@ -24,15 +24,15 @@ public class Quicksort {
             if (toSort[j] <= pivot) {
                 i++;
 
-                int swapTemp = toSort[i];
+                int temp = toSort[i];
                 toSort[i] = toSort[j];
-                toSort[j] = swapTemp;
+                toSort[j] = temp;
             }
         }
 
-        int swapTemp = toSort[i + 1];
+        int temp = toSort[i + 1];
         toSort[i + 1] = toSort[end];
-        toSort[end] = swapTemp;
+        toSort[end] = temp;
         return i + 1;
     }
 
